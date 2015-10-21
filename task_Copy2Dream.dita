@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_Copy2Dream">
+    <title>Booting from the internal microSD card, once you're logged into the system booted from
+        root on USB stick</title>
+    <shortdesc/>
+    <taskbody>
+        <context>
+            <p>To set things up to boot from the internal microSD card, once you're logged into the
+                system booted from root on USB stick you can use:
+                    <userinput>/usr/sbin/copy2dream</userinput>
+                <note>Note that if you don't have a reasonable system date and time set in the
+                    DreamPlug before running this command, you may see a long stream of warnings
+                    from tar about timestamps being in the future. It is safe to ignore these.
+                </note></p>
+        </context>
+        <steps>
+            <step>
+                <cmd>After copy2dream completes, you may need to update /etc/fstab by hand since
+                    copy2dream does not yet understand UUIDs in that file.</cmd>
+            </step>
+            <step>
+                <cmd>On reboot, you may want to interrupt the boot and type the following to ensure
+                    you boot from the internal microSD by default. This bootcmd line elides the
+                    time-consuming attempts to boot from gigE, which makes boot go much faster. </cmd>
+                <info><note>If you flashed the bootloader, you'll need to replace the *ethaddr* and
+                        *eth1addr* lines with the MAC addresses you previously recorded. If you
+                        didn't record MAC addresses, completely exclude those two lines.</note>
+                    <pre>setenv bootcmd '${x_bootcmd_usb}; ${x_bootcmd_kernel}; ${x_bootcmd_initrd}; setenv bootargs ${x_bootargs} ${x_bootargs_root}; bootm 0x6400000 0x6900000;'
+setenv x_bootcmd_kernel fatload usb 0 0x6400000 uImage
+setenv x_bootcmd_initrd fatload usb 0 0x6900000 uInitrd
+setenv x_bootargs console=ttyS0,115200
+setenv x_bootargs_root root=/dev/sda2 rootdelay=10
+setenv ethaddr=F0:AD:4E:00:00:00
+setenv eth1addr=F0:AD:4E:00:00:01
+saveenv
+reset</pre></info>
+                <stepresult><draft-comment author="rgb"
+                        ><pre>    (...) 
+                            
+ sda: sda1 sda2
+sd 1:0:0:0: [sda] No Caching mode page present
+sd 1:0:0:0: [sda] Assuming drive cache: write through
+sd 1:0:0:0: [sda] Attached SCSI removable disk
+Begin: Loading essential drivers ... done.
+Begin: Running /scripts/init-premount ... done.
+Begin: Mounting root file system ... Begin: Running /scripts/local-top ... done.
+Begin: Running /scripts/local-premount ... done.
+EXT3-fs (sda2): error: unrecognized mount option "subvol=@" or missing value
+mount: Invalid argument
+Begin: Running /scripts/local-bottom ... done.
+done.
+Begin: Running /scripts/init-bottom ... mount: No such file or directory
+done.
+Could not copy file: No such file or directory
+mount: No such file or directory
+mount: No such file or directory
+Target filesystem doesn't have requested /sbin/init.
+No init found. Try passing init= bootarg.
+(initramfs) 
+</pre></draft-comment>Congratulations,
+                    you're done! </stepresult>
+            </step>
+        </steps>
+        <postreq>To connect your DreamPlug to the Internet, plug an Ethernet cord from the box's
+            *eth0* port into your router. The *eth0* port is the inner Ethernet port. To connect to
+            the Internet through your DreamPlug, plug your computer's Ethernet port into the box's
+            eth1 port. The *eth1* port is the outer Ethernet port.</postreq>
+    </taskbody>
+</task>

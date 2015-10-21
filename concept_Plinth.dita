@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_Plinth">
+ <title>Plinth</title>
+ <shortdesc>Use this front end to administer the functions of your FreedomBox. </shortdesc>
+ <conbody>
+  <p>The Plinth front end is a web interface to administer the functions of the Freedom Box. For
+   example, the Freedom Box is a wireless router, and the front end is where you can adjust its
+   settings.</p>
+  <section><title>Overview</title><p>The front end is an extensible web platform for forms and
+    menus. It allows authenticated users to fill out forms. The interface saves the form data and
+    from them generates configuration files for the various services running on the box.</p><p>The
+    interface is pluggable. Drop modules into place to add new capabilities to Plinth and your
+    Freedom Box. Replace existing modules to get newer, better shinier functions. The modules will
+    automatically integrate into the existing menu system so you can control all of the box's parts
+    from one central location.</p></section>
+ </conbody>
+</concept>

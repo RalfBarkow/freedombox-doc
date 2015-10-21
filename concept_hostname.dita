@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_hostname">
+ <title>Hostname</title>
+ <shortdesc/>
+ <conbody>
+  <p>Hostname will be generated on the first boot.</p>
+ </conbody>
+</concept>

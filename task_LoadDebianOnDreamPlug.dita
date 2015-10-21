@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_LoadDebianOnDreamPlug">
+    <title>Load Debian on your DreamPlug</title>
+    <shortdesc/>
+    <taskbody>
+        <context>
+            <p>If you have a DreamPlug, the easiest way of loading Debian on it is using Bdale
+                Garbee's freedom-maker tool. Clone the git repo and follow the instructions in the
+                README file:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd><userinput>$ git clone
+                        http://anonscm.debian.org/git/freedombox/freedom-maker.git/</userinput></cmd>
+                <info>If you've bought your own DreamPlug through GlobalScale, make sure you <xref
+                        href="task_UpdateFirmware.dita#task_UpdateFirmware">update your
+                        firmware</xref> according to the README's "Recent Firmware Necessary!"
+                    section.</info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_Obfsproxy">
+ <title>Obfsproxy</title>
+ <shortdesc>Obfsproxy is a Python framework for implementing new pluggable transports. It uses
+  Twisted for its networking needs, and pyptlib for some pluggable transport-related features. It
+  supports the obfs2 and obfs3 pluggable transports. Maintained by asn. </shortdesc>
+ <conbody>
+  <p></p>
+ </conbody>
+</concept>

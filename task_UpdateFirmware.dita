@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_UpdateFirmware">
+    <title>Update your firmware</title>
+    <shortdesc>The DreamPlugs as currently shipped by GlobalScale (as of September 1st, 2012) use
+        firmware too old to boot the current FreedomBox kernel and will need to be updated.
+        DreamPlugs shipped out by the FreedomBox Foundation have already been updated in this way. </shortdesc>
+    <taskbody>
+        <context><draft-comment author="rgb"><xref href="http://cyrius.com/debian/kirkwood/sheevaplug/uboot-upgrade/"
+                    format="html" scope="external"/>: This page describes how to install a new
+                version of U-Boot on your plug computer. <xref
+                    href="concept_Bootloader.dita#concept_Bootloader">U-Boot</xref> is the boot
+                loader used on plug computers.</draft-comment>
+            <p>Modern kernels need a relatively recent version of the <xref
+                    href="concept_Bootloader.dita#concept_Bootloader">u-boot</xref> firmware. If you
+                still use old firmware (including what GlobalScale ships on the units by default),
+                then you need to update, which requires having the JTAG dongle (to <xref
+                    href="task_GainConsoleSerialPortAccess.dita#task_GainConsoleSerialPortAccess"
+                    >gain console serial port access</xref>). One way to know you've got old
+                firmware is if booting a Linux kernel results in errors about corrupt gzip data and
+                a failure to launch the kernel. </p>
+        </context>
+        <steps>
+            <step>
+                <note>Re-flashing firmware will erase all configuration variables! If preserving
+                    your exising boot config is important, use printenv and make notes before
+                    proceeding. Also note that any time you're re-flashing boot firmware, there is a
+                    slight chance you could 'brick' your device leaving it unbootable. If that
+                    happens, the JTAG interface can be used to recover. </note>
+                <cmd/>
+            </step>
+        </steps>
+    </taskbody>
+</task>

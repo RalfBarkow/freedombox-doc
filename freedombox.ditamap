@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>The Freedom Box</title>
+ <topicref href="concept_FreedomBox.dita">
+  <topicref href="concept_Plinth.dita"/>
+ </topicref>
+ <topicref href="task_GetHelp.dita"/>
+ <topicref href="concept_DevelopmentPlatform.dita">
+  <topicref href="topic_DreamPlug.dita"/>
+  <topicref href="task_LoadDebianOnDreamPlug.dita">
+   <topicref href="task_UpdateFirmware.dita">
+    <topicref href="concept_Bootloader.dita">
+     <topicref href="task_checkU-BootVersion.dita"/>
+     <topicref href="task_printenv.dita"/>
+    </topicref>
+    <topicref href="task_UpdateDreamPlugU-Boot.dita">
+     <topicref href="topic_u-boot.kwb.dita"/>
+    </topicref>
+   </topicref>
+   <topicref href="task_UnbrickDreamPlug.dita"/>
+   <topicref href="task_GainConsoleSerialPortAccess.dita"/>
+  </topicref>
+ </topicref>
+ <topicref href="topic_UseThisSystem.dita">
+  <topicref href="task_RunFromMicroSDCard.dita">
+   <topicref href="task_UpdateDreamPlugToBootFromInternalMicroSDCard.dita"/>
+  </topicref>
+  <topicref href="task_RunFromUSBStick.dita">
+   <topicref href="task_Copy2Dream.dita"/>
+  </topicref>
+  <topicref href="task_BuildImage.dita">
+   <topicref href="concept_vmdebootstrap.dita"/>
+  </topicref>
+ </topicref>
+ <topicref href="concept_hostname.dita"/>
+ <reltable>
+  <relheader>
+   <relcolspec type="topic" linking="sourceonly"/>
+   <relcolspec type="concept" linking="targetonly"/>
+   <relcolspec type="task" linking="targetonly"/>
+   <relcolspec type="reference" linking="targetonly"/>
+  </relheader>
+  <relrow>
+   <relcell>
+    <topicref href="task_BuildImage.dita"/>
+   </relcell>
+   <relcell>
+    <topicref href="concept_Image.dita"/>
+   </relcell>
+   <relcell/>
+  </relrow>
+ </reltable>
+</map>

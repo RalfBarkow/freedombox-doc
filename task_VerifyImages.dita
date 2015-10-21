@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_VerifyImages">
+    <title>Verify the downloaded images</title>
+    <shortdesc/>
+    <taskbody>
+        <context>
+            <p>It is important to verify the images you have downloaded to ensure that the file has
+                not be corrupted during the transmission and that it is indeed the image built by
+                FreedomBox developers. </p>
+        </context>
+        <steps>
+            <step>
+                <cmd>First open a terminal and import the public key of the FreedomBox developer who
+                    built the images: <userinput>$ gpg --keyserver x-hkp://pool.sks-keyservers.net
+                        --recv-keys 0x36C361440C9BC971</userinput></cmd>
+            </step>
+            <step>
+                <cmd>Next, verify the fingerprint of the public key: <userinput>$ gpg --fingerprint
+                        0x36C361440C9BC971</userinput></cmd>
+                <stepresult><screen>pub   4096R/0C9BC971 2011-11-12
+      Key fingerprint = BCBE BD57 A11F 70B2 3782  BC57 36C3 6144 0C9B C971
+uid                  Sunil Mohan Adapa &lt;sunil@medhas.org>
+sub   4096R/4C1D4B57 2011-11-12</screen></stepresult>
+            </step>
+            <step>
+                <cmd>Finally, verify your downloaded image with its signature file .sig. For
+                    example: <userinput>$ gpg --verify
+                        freedombox-unstable_2015-01-15_beaglebone-armhf-card.tar.bz2.sig
+                        freedombox-unstable_2015-01-15_beaglebone-armhf-card.tar.bz2</userinput></cmd>
+                <stepresult>
+                    <screen>gpg: Signature made Thursday 15 January 2015 09:27:50 AM IST using RSA key ID 0C9BC971
+gpg: Good signature from "Sunil Mohan Adapa &lt;sunil@medhas.org>"
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+Primary key fingerprint: BCBE BD57 A11F 70B2 3782  BC57 36C3 6144 0C9B C971</screen>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Extract the .tar.bz2 file. For example: <userinput>tar xvjf
+                        freedombox-unstable_2015-01-15_beaglebone-armhf-card.tar.bz2</userinput></cmd>
+            </step>
+        </steps>
+        <postreq>Installation and Use / After the download you can use the image to boot supported
+            hardware (including virtual machines). The hardware devices usually use SD Cards to boot
+            from. To copy the downloaded image to your SD card use a command like this (adapt the
+            if= and of= part to match your image and SD Card path): <userinput>$ dd
+                if=freedombox-unstable_2015-01-15_dreamplug-armel-card.img
+                of=/dev/mmcblk0</userinput></postreq>
+    </taskbody>
+</task>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_printenv">
+    <title>Saving U-Boot configuration data (including your MAC address)</title>
+    <shortdesc>print ethaddr / Upgrading from the Marvell to the DENX U-Boot <draft-comment
+            author="rgb">//FIXME shortdesc</draft-comment></shortdesc>
+    <taskbody>
+        <context>
+            <p>If you're upgrading from the Marvell to the DENX variant, issue the following command
+                and write down your MAC address. This step is important because all U-Boot
+                configuration data (including your MAC address) is lost when upgrading from the
+                Marvell to the DENX U-Boot.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd/>
+                <stepresult><draft-comment author="rgb">freedombox_14_nov_2011.img
+                        microSD</draft-comment><pre>Marvell>> printenv
+bootdelay=3
+baudrate=115200
+x_bootcmd_ethernet=ping 192.168.2.1
+x_bootcmd_usb=usb start
+ethact=egiga0
+ethaddr=F0:AD:4E:00:00:00
+eth1addr=F0:AD:4E:00:00:01
+x_bootcmd_kernel=fatload usb 0 0x6400000 uImage
+x_bootcmd_initrd=fatload usb 0 0x6900000 uInitrd
+x_bootargs=console=ttyS0,115200
+x_bootargs_root=root=/dev/sda2 rootdelay=10
+bootcmd=${x_bootcmd_usb}; ${x_bootcmd_kernel}; ${x_bootcmd_initrd}; setenv bootargs ${x_bootargs} ${x_bootargs_root}; bootm 0x6400000 0x6900000;
+stdin=serial
+stdout=serial
+stderr=serial
+
+Environment size: 533/4092 bytes
+Marvell>> </pre></stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

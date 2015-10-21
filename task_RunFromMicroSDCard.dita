@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_RunFromMicroSDCard">
+    <title>Running from a microSD Card</title>
+    <shortdesc/>
+    <taskbody>
+        <prereq>DD</prereq>
+        <context>
+            <p>When DD has finished, take the microSD card out of your computer and plug it into
+                your DreamPlug. If you have a JTAG, you can connect directly to the box to watch it
+                boot by running:<userinput>$ sudo screen /dev/ttyUSB0 115200</userinput></p>
+        </context>
+        <steps>
+            <step>
+                <cmd/>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_vmdebootstrap">
+ <title>vmdebootstrap</title>
+ <shortdesc>vmdebootstrap is a wrapper around debootstrap to install Debian into a disk image, which
+  can be used with a virtual machine (such as KVM).</shortdesc>
+ <conbody>
+  <p>syslinux and grub2 bootloaders can be supported, depending on the distribution and the
+   architecture. An example of setting up u-boot for armhf on a beaglebone-black is included. </p>
+  <p><draft-comment
+    author="http://people.skolelinux.org/pere/blog/Teaching_vmdebootstrap_to_create_Raspberry_Pi_SD_card_images.html"
+     ><xref
+     href="http://people.skolelinux.org/pere/blog/Teaching_vmdebootstrap_to_create_Raspberry_Pi_SD_card_images.html"
+     format="html" scope="external"/></draft-comment>The vmdebootstrap program is a a very nice
+   system to create virtual machine images. It create a image file, add a partition table, mount it
+   and run debootstrap in the mounted directory to create a Debian system on a stick. Yesterday, I
+   (=Petter Reinholdtsen ; R. B.) decided to try to teach it how to make images for Raspberry Pi, as
+   part of a plan to simplify the build system for the FreedomBox project. The FreedomBox project
+   already uses vmdebootstrap for the virtualbox images, but its current build system made
+   multistrap based system for Dreamplug images, and it is lacking support for Raspberry Pi.</p>
+ </conbody>
+</concept>
