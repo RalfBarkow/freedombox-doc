@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_GetHelp">
+    <title>Getting Help</title>
+    <shortdesc><draft-comment author="https://wiki.debian.org/FreedomBox/Manual/Jessie"><xref
+                href="https://wiki.debian.org/FreedomBox/Manual/Jessie" format="html"
+                scope="external"/></draft-comment></shortdesc>
+    <taskbody>
+        <context>
+            <p>This document is intended to give you all the information you need to get started
+                with your FreedomBox. However, if you have any questions after reading this
+                document, you can get help by: </p>
+            <ul>
+                <li>
+                    <p>Emailing <xref href="mailto:freedombox-discuss@lists.alioth.debian.org"
+                            format="html" scope="external"
+                            >freedombox-discuss@lists.alioth.debian.org</xref>. You can also <xref
+                            href="http://lists.alioth.debian.org/mailman/listinfo/freedombox-discuss"
+                            format="html" scope="external">sign up</xref> to receive copies of every
+                        discussion that happens on the mailing list and <xref
+                            href="http://lists.alioth.debian.org/mailman/listinfo/freedombox-discuss"
+                            format="html" scope="external">read the archives</xref>. </p>
+                </li>
+                <li>
+                    <p>Chatting at <xref href="irc://irc.oftc.net:6667/%23freedombox" format="html"
+                            scope="external">#freedombox@irc.oftc.net</xref>. </p>
+                </li>
+                <li>
+                    <p>Reading the <xref href="http://wiki.debian.org/FreedomBox" format="html"
+                            scope="external">wiki</xref>. </p>
+                </li>
+                <li>
+                    <p>Reading the <xref href="https://freedomboxfoundation.org/" format="html"
+                            scope="external">FreedomBox Foundation's website</xref>. </p>
+                </li>
+                <li>
+                    <p>Reading the <xref href="https://alioth.debian.org/projects/freedombox"
+                            format="html" scope="external">FreedomBox Project Page</xref>. <ul>
+                            <li><xref href="https://wiki.debian.org/FreedomBox" format="html"
+                                    scope="external">Project Home Page</xref></li>
+                            <li><xref href="https://alioth.debian.org/mail/?group_id=100527"
+                                    format="html" scope="external">Mailing Lists</xref></li>
+                            <li><xref href="https://alioth.debian.org/scm/?group_id=100527"
+                                    format="html" scope="external">SCM
+                                    Repository</xref><draft-comment author="rgb">//FIXME SCM
+                                    Repository is at
+                                    git://anonscm.debian.org/freedombox/freedom-maker.git</draft-comment></li>
+                        </ul></p>
+                </li>
+            </ul>
+        </context>
+    </taskbody>
+</task>

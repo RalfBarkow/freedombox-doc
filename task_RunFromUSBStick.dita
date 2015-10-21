@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_RunFromUSBStick">
+    <title>Running from a USB Stick</title>
+    <shortdesc/>
+    <taskbody>
+        <context>
+            <p>Move the USB stick to the DreamPlug, obtain a serial console, and hit reset. A good
+                way to access the serial console (actually USB serial emulation provided by the
+                optional JTAG dongle), is to use 'screen', like so: <userinput># sudo screen
+                    /dev/ttyUSB0 115200</userinput></p>
+            <p>If ``screen`` fails, see the *Errors* -> *Troubleshooting Screen* section at the end
+                of this document.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Interrupt the boot by pressing a key during the autoboot countdown, and type
+                    the following to boot from the USB stick:</cmd>
+                <info><pre>setenv bootcmd '${x_bootcmd_usb}; ${x_bootcmd_kernel}; ${x_bootcmd_initrd}; setenv bootargs ${x_bootargs} ${x_bootargs_root}; bootm 0x6400000 0x6900000;'
+setenv x_bootcmd_kernel fatload usb 2 0x6400000 uImage
+setenv x_bootcmd_initrd fatload usb 2 0x6900000 uInitrd
+setenv x_bootargs console=ttyS0,115200
+setenv x_bootargs_root root=/dev/sdc2 rootdelay=10
+boot</pre></info>
+                <stepresult>The system should boot to a login prompt, using only the bits on the
+                    stick. <note>The default root password is 'freedom'. The normal user is "fbx"
+                        and the password is "frdm".</note>
+                    <note>If booting from the USB stick fails because u-boot in the Dreamplug
+                        doesn't recognize the FAT partition on your stick, it may be because the
+                        partition type code isn't one of the FAT variants that u-boot recognizes.
+                        It's not clear what the root cause is yet, but if this happens, plug the USB
+                        stick into a Linux machine and use your favorite partition editor (fdisk
+                        works) to change the type of partition 1 to something like '6' which is
+                        simple FAT16, then write the change. This won't change the *contents* of the
+                        partition, but it may allow u-boot to recognize it.</note></stepresult>
+            </step>
+        </steps>
+
+    </taskbody>
+</task>

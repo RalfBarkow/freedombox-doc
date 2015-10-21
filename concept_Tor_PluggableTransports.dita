@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_Tor_PluggableTransports">
+ <title><b>Tor: Pluggable Transports</b></title>
+ <shortdesc>
+  <draft-comment author="rgb"><xref
+    href="https://www.torproject.org/docs/pluggable-transports.html.en" format="html"
+    scope="external"
+   >https://www.torproject.org/docs/pluggable-transports.html.en</xref></draft-comment>
+ </shortdesc>
+ <conbody>
+  <p></p>
+ </conbody>
+</concept>

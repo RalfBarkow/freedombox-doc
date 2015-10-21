@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_BuildImage">
+    <title>Building the image</title>
+    <shortdesc/>
+    <taskbody>
+        <prereq><p>To build the image, download and install the dependencies for each of the images
+                you want to build. </p>
+            <p>Required for all images: <userinput># apt-get -y install git python-docutils
+                    mktorrent vmdebootstrap dosfstools</userinput></p></prereq>
+        <context>
+            <p>Now, fetch the git source of freedom-maker and build the image you want: </p>
+        </context>
+        <steps>
+            <step>
+                <cmd><userinput> $ git clone
+                        http://anonscm.debian.org/git/freedombox/freedom-maker.git freedom-maker
+                    </userinput></cmd>
+            </step>
+            <step>
+                <cmd><userinput>$ make -C freedom-maker dreamplug raspberry
+                    virtualbox</userinput></cmd>
+                <info><note>If you only want one of the possible images of DreamPlug, RaspberryPi
+                        and VirtualBox, remove the rest from the make command line. The images will
+                        show up in freedom-maker/build/.</note></info>
+            </step>
+            <step>
+                <cmd>*dd* the images to the SD card (for DreamPlug and RaspberryPi), or create a new
+                    VM for the VirtualBox hard drive file, and boot the client.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_checkU-BootVersion">
+    <title>Checking which version of U-Boot is installed on your plug computer</title>
+    <shortdesc><draft-comment author="rgb"><xref
+                href="http://cyrius.com/debian/kirkwood/sheevaplug/uboot-upgrade/" format="html"
+                scope="external"/></draft-comment></shortdesc>
+    <taskbody>
+        <context>
+            <p>First of all, check which version of U-Boot is installed on your plug computer to
+                find out whether you have to perform this upgrade. </p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Connect to U-Boot using the serial console. </cmd>
+                <stepresult><fig>
+                        <image href="image_checkU-BootVersion.png"/>
+                    </fig></stepresult>
+            </step>
+            <step>
+                <cmd>Hit any key to stop autoboot and type: <userinput>version</userinput></cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

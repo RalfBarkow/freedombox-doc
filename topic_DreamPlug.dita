@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_DreamPlug">
+  <title>DreamPlug</title>
+  <body>
+    <draft-comment author="rgb"><xref href="https://wiki.debian.org/FreedomBox/Hardware/DreamPlug"
+        format="html" scope="external"
+      >https://wiki.debian.org/FreedomBox/Hardware/DreamPlug</xref></draft-comment>
+    <draft-comment author="rgb"><xref href="http://wiki.gentoo.org/wiki/DreamPlug" format="html"
+        scope="external"/></draft-comment>
+    <section><p><xref href="https://www.globalscaletechnologies.com/t-dreamplugdetails.aspx" format="html"
+          scope="external">DreamPlug</xref> is the hardware for which FreedomBox has been originally
+        targeted. FreedomBox images are built and tested for it. For using this device as
+        FreedomBox, a USB WiFi device that does not require non-free firmware is recommended. You
+        can find more support and discussion for DreamPlug on the <xref
+          href="http://www.plugcomputer.org/plugforum/" format="html" scope="external">official
+          forum</xref>.</p></section>
+    <section><title>Hardware</title>
+      <draft-comment author="rgb">L5551350 9egdp / DreamPlug model: 003-DS2001 / MAC1:
+        F0:AD:4E:01:44:22 / MAC2: F0:AD:4E:01:44:23 / S/N: DS2-1213-000632</draft-comment><table id="table_wq1_d25_qq">
+        <title> Technical specifications of the DreamPlug </title>
+        <tgroup cols="2">
+          <colspec colnum="1" colname="col1"/>
+          <colspec colnum="2" colname="col2"/>
+          <tbody>
+            <row>
+              <entry>System on Chip </entry>
+              <entry>Kirkwood MV88F6281-A1 </entry>
+            </row>
+            <row>
+              <entry>CPU </entry>
+              <entry>Feroceon 88FR131 rev 1 (v5l) a.k.a. Marvel Sheeva 1.2 GHz (ARMv5TE) </entry>
+            </row>
+            <row>
+              <entry>RAM </entry>
+              <entry>512 MiB 16bit DDR2-800 MHz </entry>
+            </row>
+            <row>
+              <entry>Internal storage </entry>
+              <entry>4 GiB on board micro-SD </entry>
+            </row>
+            <row>
+              <entry>Internet connectivity </entry>
+              <entry>
+                <ul id="ul_it1_d25_qq">
+                  <li> 2 x Gigabit Ethernet 10/100/1000 Mbps </li>
+                  <li> WiFi 802.11 b/g </li>
+                  <li> Bluetooth BT2.1 + EDR </li>
+                  <li> JTAG and UART connections for external module <draft-comment author="rgb">GTI
+                      / External JTAG Module / Globalscale / UART, RS 232 </draft-comment></li>
+                </ul>
+              </entry>
+            </row>
+            <row>
+              <entry>External storage and connectivity </entry>
+              <entry>
+                <ul id="ul_c51_d25_qq">
+                  <li> 2 x USB 2.0 ports (Host) </li>
+                  <li> 1 x eSATA 2.0 port -3Gbps SATAII </li>
+                  <li> 1 x SD socket for user expansion/application</li>
+                </ul>
+              </entry>
+            </row>
+            <row>
+              <entry>Audio interfaces Headphone (analogue) out </entry>
+              <entry>
+                <ul id="ul_s51_d25_qq">
+                  <li> Mic In </li>
+                  <li> Fiber Optics (SP/DIF) out</li>
+                </ul>
+              </entry>
+            </row>
+            <row>
+              <entry>Power suppy </entry>
+              <entry>5V3A DC power supply (yes, it consumes &lt;5 W!) </entry>
+            </row>
+            <row>
+              <entry>Physical dimensions </entry>
+              <entry>120mm (L) x 90mm (W) x 30mm (H) </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></section>
+    <section><title>Disk partitions</title>
+      <p>While unless you have a good reason you should be mounting partitions using UUID or Label,
+        the existing disk partitions are as follows: </p>
+      <ul id="ul_cdt_k25_qq">
+        <li>/dev/sda is the internal SD card and separated so sda1 is a ~100 MiB FAT16 partition
+          with kernel uImages and sda2 is a ~4 GiB ext3 partition carrying the stock (in my case
+          Debian) OS.</li>
+        <li>/dev/sdb is the external SD card slot</li>
+        <li>/dev/sdc is the first external disk via USB or eSATA</li>
+        <li> The rest follows in the same logic.</li>
+      </ul></section>
+  </body>
+</topic>

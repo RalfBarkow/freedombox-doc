@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_UpdateDreamPlugToBootFromInternalMicroSDCard">
+    <title>Updating your DreamPlug to boot from the internal microSD card</title>
+    <shortdesc/>
+    <taskbody>
+        <context><!-- ## Invalid boot device -->
+            <p>If, while booting your DreamPlug, you receive this error message:
+                <pre>    2 Storage Device(s) found
+
+    ** Invalid boot device **
+
+    ** Invalid boot device **
+    Wrong Image Format for bootm command
+    ERROR: can't get kernel image!</pre></p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Make sure you've updated your DreamPlug to boot from the internal microSD card.
+                    You'll need to plug in the JTAG and interrupt the boot process to paste in these
+                    commands:</cmd>
+                <info><pre>setenv bootcmd '${x_bootcmd_usb}; ${x_bootcmd_kernel}; ${x_bootcmd_initrd}; setenv bootargs ${x_bootargs} ${x_bootargs_root}; bootm 0x6400000 0x6900000;'
+setenv x_bootcmd_kernel fatload usb 0 0x6400000 uImage
+setenv x_bootcmd_initrd fatload usb 0 0x6900000 uInitrd
+setenv x_bootargs console=ttyS0,115200
+setenv x_bootargs_root root=/dev/sda2 rootdelay=10 
+saveenv
+reset</pre></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

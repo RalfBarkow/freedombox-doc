@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_ScrambleSuit">
+ <title>ScrambleSuit</title>
+ <shortdesc>ScrambleSuit is a pluggable transport that protects against follow-up probing attacks
+  and is also capable of changing its network fingerprint (packet length distribution, inter-arrival
+  times, etc.). It's part of the Obfsproxy framework. Maintained by Philipp Winter. </shortdesc>
+ <conbody>
+  <p></p>
+ </conbody>
+</concept>

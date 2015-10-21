@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_DevelopmentPlatform">
+ <title>Development platform</title>
+ <shortdesc>The first development platform obtained by the FreedomBox project is the DreamPlug.
+  DreamPlug development kits are available from the manufacturer, Globalscale Technologies, and
+  resellers such as newIT in the UK and Spinifex in Australia. <draft-comment author="rgb"><xref
+    href="https://wiki.debian.org/FreedomBox/GettingStarted" format="html" scope="external"
+   /></draft-comment></shortdesc>
+ <conbody>
+  <p/>
+ </conbody>
+</concept>

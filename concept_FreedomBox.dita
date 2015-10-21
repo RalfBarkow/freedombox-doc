@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_FreedomBox">
+ <title>Freedom Box </title>
+ <shortdesc/>
+ <conbody>
+  <p>The Freedom Box is a net appliance conceived by Eben Moglen. It contains free software and is
+   designed to allow you to interface with the rest of the net under conditions of protected privacy
+   and data security.</p>
+ </conbody>
+</concept>

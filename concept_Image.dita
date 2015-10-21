@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_Image">
+ <title>Image</title>
+ <shortdesc>Several people have asked for an easy-to-install image that they can use to just flash
+  the sd card in a DreamPlug.</shortdesc>
+ <conbody>
+  <p>a byte-for-byte clone of the entire disk.</p>
+  <section><title>Image</title><p><draft-comment author="rgb">See <xref
+      href="https://www.freedomboxfoundation.org/code/" format="html" scope="external"
+      >https://www.freedomboxfoundation.org/code/</xref></draft-comment>A copy of the binary image
+    for several hardward platforms are currently avialble. Freedombox is based on Debian Linux so a
+    wide variety of platforms are supported. The FreedomBox Development team provides images for the
+    most popular platforms currently used by the members of the team. </p>
+   <p>Currently the FreedomBox development team supports: <ul id="ul_erg_3yt_4t">
+     <li>VirtualBox (should work with other virtual machine hosts) </li>
+     <li>RaspberryPi </li>
+     <li>BeagleBone </li>
+     <li>DreamPlug</li>
+    </ul>Official Images: <xref href="http://ftp.skolelinux.org/pub/freedombox/" format="html"
+     scope="external">http://ftp.skolelinux.org/pub/freedombox/ </xref></p>
+   <p>Unofficial Images: <xref href="http://compcube.info/wiki/FreedomBoxImages/" format="html"
+     scope="external">http://compcube.info/wiki/FreedomBoxImages/</xref>
+   </p>
+   <p>Instructions for <xref href="https://wiki.debian.org/FreedomBox/Download" format="html"
+     scope="external">downloading and verifying images</xref> are avaliable.</p></section>
+ </conbody>
+</concept>

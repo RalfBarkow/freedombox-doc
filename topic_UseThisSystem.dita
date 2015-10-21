@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_UseThisSystem">
+  <title>Using this system</title>
+  <body>
+    <p>There are a couple ways to use this system:</p>
+    <ol>
+      <li><p>If you just want to use a FreedomBox and don't care about changing how it works or
+          mucking about in its insides (if you're like most people), you should use one of the
+          pre-built systems we've already put together. </p><p>If you don't have a DreamPlug or
+          don't know what one is, make sure to ask for a copy of the VirtualBox image. If you do
+          have a DreamPlug, then you should get a pre-built image from someone and copy it to an SD
+          card or USB drive. If you don't have a JTAG or don't know what one is, make sure to ask
+          for the SD card (not the USB) version. </p></li>
+      <li> If you want to change and build on it, you can use:<ol>
+          <li>A USB stick. This requires a JTAG, but doesn't require opening up the DreamPlug, or, </li>
+          <li>A microSD card and adapter. You can use the one from inside the DreamPlug. You won't
+            need a JTAG, but you will need to open the DreamPlug and void the warranty.</li>
+        </ol></li>
+    </ol>
+  </body>
+</topic>
