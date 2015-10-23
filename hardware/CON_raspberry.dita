@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="CON_raspberry">
+ <title>Raspberry Pi Model B+</title>
+ <shortdesc>Raspberry Pi (Model B+) is a popular single board computer developed with the intention
+  of promoting teaching of basic computer science in schools. FreedomBox images are built and tested
+  for it. For using this board as FreedomBox, a USB WiFi device that does not require non-free
+  firmware is recommended.</shortdesc>
+ <conbody>
+  <p><xref href="https://wiki.debian.org/FreedomBox/Hardware/RaspberryPi" format="html"
+    scope="external"/></p>
+  <note>The Debian architecture used for this device is <tt>armel</tt>. This means floating point
+   computations are done in software and most operations are slower than what Raspberry Pi is
+   capable of.</note>
+ </conbody>
+</concept>

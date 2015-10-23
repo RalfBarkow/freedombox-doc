@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
-<task id="task_DownloadImage">
+<task id="TASK_DownloadImage">
     <title>Download image</title>
     <shortdesc/>
     <taskbody>
         <context>
-            <p>Recent images for supported targets are available here:</p>
+            <p><draft-comment author="rgb"><xref href="https://wiki.debian.org/FreedomBox/Download"
+                        format="html" scope="external"
+                        >https://wiki.debian.org/FreedomBox/Download</xref></draft-comment>Recent
+                images for supported targets are available here:</p>
             <ul id="ul_images">
                 <li>Official Images: <xref href="http://ftp.skolelinux.org/pub/freedombox/"
                         format="html" scope="external"

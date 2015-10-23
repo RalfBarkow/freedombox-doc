@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="TOP_QualityAssurance">
+  <title>Quality Assurance</title>
+  <body>
+    <p>
+      <draft-comment author="rgb"><xref href="https://wiki.debian.org/FreedomBox/QualityAssurance"
+          format="html" scope="external"/></draft-comment>
+    </p>
+    <section><title>Reporting Bugs</title>
+      <p>
+        <ul id="ul_pgs_d1h_tt">
+          <li>Report bugs related to Plinth package may be reported at its <xref
+              href="https://github.com/freedombox/Plinth/issues" format="html" scope="external"
+              >issue tracker</xref>. However, bugs related to Plinth Debian packaging must be
+            reported on <xref
+              href="https://bugs.debian.org/cgi-bin/pkgreport.cgi?pkg=plinth;dist=unstable"
+              format="html" scope="external">Debian BTS</xref>. See <xref
+              href="https://wiki.debian.org/HowtoUseBTS" format="html" scope="external">instructions
+              on using BTS</xref>. </li>
+          <li>Report bugs related to freedombox-setup package at freedombox-setup BTS. See
+            instructions on using BTS. </li>
+          <li>Report bugs related to freedom-maker package may be reported at its issue tracker. </li>
+          <li>If you are unsure which package a bug belongs to or if you unsure whether something is
+            a bug or if you are unsure about the process of reporting a bug, simple send an email to
+            the mailing list or ask someone on the #freedombox IRC channel </li>
+        </ul>
+      </p></section>
+    <section><title>Hardware Tests</title></section>
+  </body>
+</topic>
