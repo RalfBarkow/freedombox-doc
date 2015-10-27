@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="TASK_ForwardThroughTor">
+    <title>Forwarding through Tor</title>
+    <shortdesc/>
+    <taskbody>
+        <context>
+            <p><draft-comment author="rgb"><xref
+                        href="https://wiki.archlinux.org/index.php/Privoxy#Forwarding_through_tor"
+                        format="html" scope="external"
+                        >https://wiki.archlinux.org/index.php/Privoxy#Forwarding_through_tor</xref></draft-comment>To
+                chain Privoxy and Tor, both running on the same system:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Edit your <tt>/etc/privoxy/config</tt> file and add this line (be sure to
+                    include the . at the end): <userinput>forward-socks5t / 127.0.0.1:9050 .
+                    </userinput>
+                </cmd>
+                <info>This example uses the default port used by Tor. If you changed the port number
+                    modify the example accordingly. <tt>forward-socks5t</tt> works like vanilla
+                        <tt>forward-socks5</tt> but lets Privoxy additionally use Tor-specific SOCKS
+                    extensions. Currently the only supported SOCKS extension is optimistic data
+                    which can reduce the latency for the first request made on a newly created
+                    connection. Refer to the <xref
+                        href="http://www.privoxy.org/user-manual/config.html" format="html"
+                        scope="external">Privoxy 3.0.23 User Manual</xref> or to section 5 of the
+                    manual inside <tt>/etc/privoxy/config</tt> for a complete list of options and
+                    examples.</info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

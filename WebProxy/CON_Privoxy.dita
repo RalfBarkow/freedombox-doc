@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="CON_Privoxy">
+ <title>Privoxy</title>
+  <shortdesc>Privoxy is a non-caching web proxy with advanced filtering capabilities for enhancing
+    privacy, modifying web page data and HTTP headers, controlling access, and removing ads and
+    other obnoxious Internet junk.</shortdesc>
+ <conbody>
+  <p>You can use Privoxy by modifying your browser proxy settings to your FreedomBox hostname (or IP
+      address) with port 8118. While using Privoxy, you can see its configuration details and
+      documentation at <xref href="http://config.privoxy.org/" format="html" scope="external"
+        >http://config.privoxy.org/</xref> or <xref href="http://p.p" format="html" scope="external"
+        >http://p.p</xref></p>
+ </conbody>
+</concept>
